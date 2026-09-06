@@ -173,6 +173,19 @@ docker compose logs -f
 docker compose down
 ```
 
+### 使用 NGINX/Cloudflare 时记得开启 websocket 支持。并且 NGINX 要求填入以下内容，实现最大化的减少错误
+### 错误出现
+##### (400 Request Header Or Cookie Too Large、414 Request-URI Too Large)&(upstream sent too big header while reading response header from upstream)
+
+### 解决方案：
+
+``` 
+proxy_buffer_size 128k;
+proxy_buffers 8 128k;
+proxy_busy_buffers_size 256k;
+large_client_header_buffers 8 64k;
+client_header_buffer_size 64k;
+```
 
 
 ## 管理后台
