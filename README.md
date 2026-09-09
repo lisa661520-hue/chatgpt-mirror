@@ -98,8 +98,7 @@ chatgpt-mirror/
 ├── backend/                 # 管理服务
 ├── frontend/                # 管理后台
 ├── imageandvideo/           # README 图片与演示视频
-├── docker-compose.yml       # 本地部署编排
-├── vps-docker-compose.yml   # VPS 部署编排
+├── docker-compose.yml       # VPS 部署编排
 └── FAQ.md                   # 常见问题
 ```
 
